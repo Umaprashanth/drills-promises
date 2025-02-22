@@ -10,7 +10,9 @@ function createDirectory(path) {
     return new Promise((resolve, reject) => {
         fs.mkdir(path, { recursive: true }, (err) => {
             if (err) {
-                reject(err)}
+                reject(err.message)
+                return 
+            }
             else {
                 resolve()}
         });
@@ -21,7 +23,9 @@ function createFile(path, data) {
     return new Promise((resolve, reject) => {
         fs.writeFile(path, data, (err) => {
             if (err) {
-                reject(err)}
+                reject(err.message)
+                return 
+            }
             else {
                 resolve()}
         });
@@ -32,7 +36,9 @@ function deleteFile(path) {
     return new Promise((resolve, reject) => {
         fs.unlink(path, (err) => {
             if (err) {
-                reject(err)}
+                reject(err.message)
+                return 
+            }
             else {
                 resolve()}
         });

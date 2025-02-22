@@ -1,0 +1,3 @@
+./upperCaseData.txt
+./splitContent.txt
+./combined.txt
